@@ -1,0 +1,737 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Lora:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap');
+
+/* font-family: 'Dancing Script', cursive;
+font-family: 'Lora', serif;
+font-family: 'Poppins', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 500vh;
+    background-color: #000;
+}
+
+h2 {
+    font-size: 43px;
+    font-family: 'Lora', serif;
+    color: #fff;
+    text-align: center;
+}
+
+.world {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    perspective: 1000px;
+    /* 원근감 */
+}
+
+.world .stage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    transform-style: preserve-3d;
+    /* world의 자식이 전달을 위해 작성 */
+}
+
+.world .stage .house {
+    width: 100vw;
+    height: 100vh;
+    transform-style: preserve-3d;
+    transform: translateZ(-990vw);
+}
+
+.world .stage .house .wall {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* -------------------------------벽!!!!!!!!!!!!!!!!!!!------------------------ */
+.world .stage .house .wall-left {
+    /*     width: 1000vw;
+    background-color: #f8f8f8;
+    transform: rotateY(90deg) translateZ(-500vw); */
+
+    width: 2000vw;
+    height: 100vh;
+    background: url(img/abstract-smoke-wallpaper-background-desktop.jpg);
+    background-size: cover;
+    transform: rotateY(90deg) translateZ(-1000vw);
+
+}
+
+.world .stage .house .wall-right {
+    /*     width: 1000vw;
+    background-color: #f8f8f8;
+    transform: rotateY(90deg) translateZ(-400vw); */
+
+    width: 2000vw;
+    height: 100vh;
+    background: url(img/abstract-smoke-wallpaper-background-desktop.jpg);
+    background-size: cover;
+    transform: rotateY(90deg) translateZ(-900vw);
+}
+
+/* -------------------------------공통컨텐츠헤더!!!!!!!!!!!!!!!!!!!!!!!!------------------------ */
+
+
+.wall .wall-header {
+    display: flex;
+    height: 105px;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+
+.wall .wall-header::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 80%;
+    background-color: #000;
+    top: 75px;
+    left: 180px;
+    margin-top: 35px;
+}
+
+
+.search {
+    padding: 1rem 1.5rem;
+    border-radius: 4rem;
+    border: 1px solid #000;
+    color: #000;
+    text-decoration: none;
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 20px;
+    gap: 1rem;
+    padding-right: 300px;
+}
+
+.search i {
+    margin-right: 25px;
+}
+
+
+.search2 {
+    padding: 1rem 7rem;
+    border-radius: 4rem;
+    border: 1px solid #000;
+    color: #000;
+    text-decoration: none;
+    font-family: 'Lora', serif;
+    font-size: 20px;
+
+}
+
+/* -------------------------------룩북 봄!!!!!!!!!!!!!!!!!!!!!!!!------------------------ */
+
+
+.container2 {
+    position: relative;
+}
+
+.wall-front-a .container2 .des1-2 {
+    color: #FF8080;
+}
+
+.wall-front-a .container2 .spring2-1 {
+    float: left;
+    border-right: 1px solid #FF8080;
+}
+
+.wall-front-a .container2 .spring2-1 img {
+    width: 450px;
+}
+
+.wall-front-a .container2 .spring2 {
+    position: absolute;
+    width: 50%;
+    top: 100px;
+    right: 117px;
+}
+
+.wall-front-a .container2 .spring2 img {
+    float: right;
+    width: 250px;
+    padding-right: 150px;
+
+}
+
+.wall-front-a .container2 .spring2 img:nth-child(1) {}
+
+.wall-front-a .container2 .spring2 img:nth-child(2) {
+    padding-bottom: 20px;
+}
+
+.wall-front-a .container2 .spring2 img:nth-child(3) {
+    padding-right: 30px;
+}
+
+.wall-front-a .container2 .spring2 img:nth-child(4) {
+    padding-right: 10px;
+    padding-bottom: 30px;
+}
+
+.wall-front-a .container2 .spring2 img:nth-child(5) {
+    position: absolute;
+    right: 0;
+    bottom: 17px;
+}
+
+.wall-front-a .container2 .spring2 img:nth-child(6) {
+    position: absolute;
+    padding-right: 0px;
+    right: -34px;
+    bottom: -43px;
+}
+
+/* -------------------------------룩북 봄2222!!!!!!!!!!!!!!!!!!!!!!!!------------------------ */
+
+
+.container2 {}
+
+.container2 .des1-2 {
+    margin: 20px 0;
+    color: #B2A4FF;
+}
+
+.container2 .spring2-1 {
+    float: left;
+    border-right: 1px solid #B2A4FF;
+}
+
+.container2 .spring2-1 img {
+    width: 660px;
+    padding: 0 107px;
+}
+
+.container2 .spring2-2 {
+    float: right;
+}
+
+.container2 .spring2-2 img {
+    width: 550px;
+    padding-right: 157px;
+}
+
+
+
+/* -------------------------------룩북 여름!!!!!!!!!!!!!!!!!!!!!!!!------------------------ */
+
+
+
+.wall-front-c .container2 {}
+
+.wall-front-c .container2 .des1-2 {
+    margin: 20px 0;
+    color: #FF0060;
+}
+
+.summer-1 {
+    position: relative;
+}
+
+.summer-1 img:nth-child(1) {
+    position: absolute;
+    width: 26%;
+    left: 202px;
+    top: 9px;
+}
+
+.summer-1 img:nth-child(2) {
+    position: absolute;
+    width: 22%;
+    left: 324px;
+    top: 82px
+}
+
+.summer-1 img:nth-child(3) {
+    position: absolute;
+    width: 22%;
+    left: 324px;
+    top: 180px
+}
+
+
+.summer-2 {
+    position: relative;
+    float: right;
+    width: 50%;
+    border-left: 1px solid #FF0060;
+}
+
+.summer-2 img:nth-child(3) {
+    position: absolute;
+    width: 30%;
+    top: -6px;
+    right: 56px;
+}
+
+.summer-2 img:nth-child(4) {
+    position: absolute;
+    width: 30%;
+    bottom: -43px;
+    right: 46px;
+}
+
+.summer-2 img:nth-child(5) {
+    position: absolute;
+    width: 40%;
+    top: 232px;
+    left: 36px;
+}
+
+.summer-2 img:nth-child(6) {
+    position: absolute;
+    width: 30%;
+    top: 18px;
+    left: 226px;
+}
+
+/* -------------------------------룩북 여름!!!!!!!!!!!!!!!!!!!!!!!!------------------------ */
+
+
+
+.wall-front-d .container2 .des1-2 {
+    margin: 20px 0;
+    color: #6f00ff;
+}
+
+.summer2-1 {
+    position: relative;
+}
+
+.summer2-1 img:nth-child(1) {
+    position: absolute;
+    width: 26%;
+    left: 202px;
+    top: 9px;
+}
+
+.summer2-1 img:nth-child(2) {
+    position: absolute;
+    width: 19%;
+    left: 371px;
+    top: 117px;
+}
+
+.summer2-1 img:nth-child(3) {
+    position: absolute;
+    width: 19%;
+    left: 165px;
+    top: 299px;
+}
+
+.summer2-1 img:nth-child(4) {
+    position: absolute;
+    width: 15%;
+    left: 453px;
+    top: 299px;
+}
+
+
+.summer2-2 {
+    position: relative;
+    float: right;
+    width: 50%;
+    border-left: 1px solid #6f00ff;
+
+}
+
+.summer2-2 img:nth-child(1) {
+    padding-left: 60px;
+    width: 57%;
+}
+
+.summer2-2 img:nth-child(2) {
+    position: absolute;
+    width: 30%;
+    bottom: 0;
+    left: 194px;
+}
+
+.summer2-2 img:nth-child(3) {
+    position: absolute;
+    width: 40%;
+    right: 40px;
+    bottom: 0;
+}
+
+
+
+/* -------------------------------룩북 가을!!!!!!!!!!!!!!!!!!!!!!!!------------------------ */
+
+
+.wall-front-e .container2 .des1-2 {
+    margin: 20px 0;
+    color: #0f2155;
+}
+
+.fall-1 {
+    position: relative;
+}
+
+.fall-1 img:nth-child(1) {
+    position: absolute;
+    width: 20%;
+    left: 202px;
+    top: 15px;
+}
+
+.fall-1 img:nth-child(2) {
+    position: absolute;
+    width: 15%;
+    left: 87px;
+    top: 239px;
+}
+
+
+.fall-1 img:nth-child(3) {
+
+    position: absolute;
+    width: 20%;
+    left: 345px;
+    top: 174px;
+}
+
+
+.fall-2 {
+    position: relative;
+    float: right;
+    width: 50%;
+    border-left: 1px solid #0f2155;
+
+}
+
+.fall-2 img:nth-child(1) {
+    padding-left: 60px;
+    width: 57%;
+}
+
+
+.fall-2 img:nth-child(2) {
+    position: absolute;
+    width: 30%;
+    bottom: 0;
+    left: 347px;
+}
+
+
+
+.fall-2 img:nth-child(3) {
+    position: absolute;
+    width: 31%;
+    right: 40px;
+    top: 0;
+}
+
+.fall-2 img:nth-child(4) {
+    position: absolute;
+    width: 40%;
+    right: 40px;
+    bottom: -34px;
+}
+
+/* -------------------------------룩북 가을!!!!!!!!!!!!!!!!!!!!!!!!------------------------ */
+
+.wall-front-f .container2 .des1-2 {
+    margin: 20px 0;
+    color: #675D50;
+}
+
+.fall2-1 {
+    position: relative;
+}
+
+.fall2-1 img:nth-child(1) {
+    position: absolute;
+    width: 20%;
+    left: 202px;
+    top: 15px;
+}
+
+.fall2-1 img:nth-child(2) {
+    position: absolute;
+    width: 15%;
+    left: 87px;
+    top: 239px;
+}
+
+
+.fall2-1 img:nth-child(3) {
+
+    position: absolute;
+    width: 15%;
+    left: 400px;
+    top: 30px;
+}
+
+.fall2-1 img:nth-child(4) {
+    position: absolute;
+    width: 20%;
+    left: 351px;
+    top: 180px;
+}
+
+.fall2-2 {
+    position: relative;
+    float: right;
+    width: 50%;
+    border-left: 1px solid #675D50;
+}
+
+
+.fall2-2 img:nth-child(1) {
+    padding-left: 60px;
+    width: 44%;
+}
+
+
+.fall2-2 img:nth-child(2) {
+    position: absolute;
+    width: 28%;
+    bottom: 0;
+    left: 347px;
+}
+
+
+
+.fall2-2 img:nth-child(3) {
+    position: absolute;
+    width: 29%;
+    right: 40px;
+    top: 0;
+}
+
+.fall2-2 img:nth-child(4) {
+    position: absolute;
+    width: 35%;
+    right: 40px;
+    bottom: -6px;
+}
+
+
+/* -------------------------------룩북 겨울!!!!!!!!!!!!!!!!!!!!!!!!------------------------ */
+
+
+.wall-front-g .container2 .des1-2 {
+    margin: 20px 0;
+    color: #31304D;
+}
+
+.winter-1 {
+    position: relative;
+}
+
+.winter-1 img:nth-child(1) {
+    position: absolute;
+    width: 20%;
+    left: 202px;
+    top: 15px;
+}
+
+.winter-1 img:nth-child(2) {
+    position: absolute;
+    width: 15%;
+    left: 422px;
+    top: -4px;
+}
+
+
+.winter-1 img:nth-child(3) {
+
+    position: absolute;
+    width: 24%;
+    left: 400px;
+    top: 180px;
+}
+
+.winter-2 {
+    position: relative;
+    float: right;
+    width: 50%;
+    border-left: 1px solid #31304D;
+    ;
+}
+
+
+.winter-2 img:nth-child(1) {
+    padding-left: 60px;
+    width: 60%;
+}
+
+
+.winter-2 img:nth-child(2) {
+    position: absolute;
+    width: 28%;
+    bottom: 0;
+    left: 347px;
+}
+
+
+
+.winter-2 img:nth-child(3) {
+    position: absolute;
+    width: 29%;
+    right: 40px;
+    left: 0;
+    top: 305px;
+}
+
+.winter-2 img:nth-child(4) {
+    position: absolute;
+    width: 35%;
+    right: 40px;
+    bottom: -6px;
+}
+
+
+/* -------------------------------룩북 겨울!!!!!!!!!!!!!!!!!!!!!!!!------------------------ */
+
+
+.wall-front-h .container2 .des1-2 {
+    margin: 20px 0;
+    color: #DDF2FD;
+}
+
+.winter2-1 {
+    position: relative;
+}
+
+.winter2-1 img:nth-child(1) {
+    position: absolute;
+    width: 20%;
+    left: 202px;
+    top: 15px;
+}
+
+.winter2-1 img:nth-child(2) {
+    position: absolute;
+    width: 15%;
+    left: 422px;
+    top: -4px;
+}
+
+
+.winter2-1 img:nth-child(3) {
+    position: absolute;
+    width: 21%;
+    left: 400px;
+    top: 120px;
+}
+
+.winter2-2 {
+    position: relative;
+    float: right;
+    width: 50%;
+    border-left: 1px solid #31304D;
+    ;
+}
+
+
+.winter2-2 img:nth-child(1) {
+    padding-left: 60px;
+    width: 42%;
+}
+
+
+.winter2-2 img:nth-child(2) {
+    position: absolute;
+    width: 28%;
+    bottom: 0;
+    left: 253px;
+}
+
+
+
+.winter2-2 img:nth-child(3) {
+    position: absolute;
+    width: 29%;
+    right: 141px;
+    top: -22px;
+}
+
+.winter2-2 img:nth-child(4) {
+    position: absolute;
+    width: 35%;
+    right: 40px;
+    bottom: -6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------------------- */
+
+
+.world .stage .house .wall-front {}
+
+
+.world .stage .house .wall-front-a {
+    transform: translateZ(950vw);
+    background-color: #CDFAD5;
+}
+
+.world .stage .house .wall-front-b {
+    transform: translateZ(600vw);
+    background-color: #FFCCCC;
+}
+
+.world .stage .house .wall-front-c {
+    transform: translateZ(300vw);
+    background-color: #9BB8CD;
+}
+
+.world .stage .house .wall-front-d {
+    transform: translateZ(50vw);
+    background-color: #FEFF86;
+}
+
+.world .stage .house .wall-front-e {
+    transform: translateZ(-250vw);
+    background-color: #F3DEBA;
+}
+
+.world .stage .house .wall-front-f {
+    transform: translateZ(-550vw);
+    background-color: #99A98F;
+}
+
+.world .stage .house .wall-front-g {
+    transform: translateZ(-800vw);
+    background-color: #B6BBC4;
+}
+
+.world .stage .house .wall-front-h {
+    transform: translateZ(-1000vw);
+    background-color: #576CBC;
+}
